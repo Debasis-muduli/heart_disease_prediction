@@ -6,9 +6,6 @@
       "use": "@vercel/python"
     }
   ],
-  "includeFiles": [
-    "heart_disease_pipeline.pkl"
-  ],
   "routes": [
     {
       "src": "/(.*)",
