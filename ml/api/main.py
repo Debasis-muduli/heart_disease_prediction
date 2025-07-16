@@ -11,8 +11,9 @@ import os
 
 # Global variable to hold the model, and path definition
 model = None
-MODEL_PATH = 'heart_disease_pipeline.pkl'
-MODEL_PATH = os.path.abspath(MODEL_PATH)  # Ensure the path is absolute
+MODEL_PATH = os.path.join(os.path.dirname(__file__), '..', 'heart_disease_pipeline.pkl')
+MODEL_PATH = os.path.abspath(MODEL_PATH)
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):

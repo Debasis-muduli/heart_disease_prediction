@@ -2,14 +2,17 @@
   "version": 2,
   "builds": [
     {
-      "src": "ml/main.py",
+      "src": "api/main.py",
       "use": "@vercel/python"
     }
+  ],
+  "includeFiles": [
+    "heart_disease_pipeline.pkl"
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "ml/main.py"
+      "dest": "api/main.py"
     }
   ]
 }
